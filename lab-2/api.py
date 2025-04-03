@@ -4,7 +4,7 @@ from cipher.vigenere import VigenereCipher
 from cipher.railfence import RailFenceCipher
 from cipher.playfair import PlayFairCipher
 app = Flask(__name__)
-
+    #CAESAR CIPHER ALGORITHM
 caesar_cipher = CaesarCipher()
 @app.route("/api/caesar/encrypt", methods=["POST"])
 def caesar_encrypt():
@@ -81,6 +81,7 @@ def playfair_decrypt():
     decrypted_text = playfair_cipher.playfair_decrypt(cipher_text, playfair_matrix)
     return jsonify({'decrypted_text': decrypted_text})
 
+    
     #main
 if __name__ == "__main__":
     app.run(host = "0.0.0.0", port = 5000, debug = True)

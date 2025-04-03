@@ -14,7 +14,7 @@ class RailFenceCipher:
             rail_index += direction
         cipher_text = ''.join(''.join(rail) for rail in rails)
         return cipher_text
-    def rail_fence_decrypt(selof, cipher_text, num_rails):
+    def rail_fence_decrypt(self, cipher_text, num_rails):
         rail_lengths = [0] * num_rails
         rail_index = 0
         direction = 1
